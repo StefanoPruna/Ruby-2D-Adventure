@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/Ruby 2D adventure.unity
+  isLoaded: 1
+  isActive: 1
