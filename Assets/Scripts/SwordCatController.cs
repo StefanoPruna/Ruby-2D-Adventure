@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwordCatController : MonoBehaviour 
 {
     public int maxHealth;
+    public int health { get { return currentHealth; } }//property definition, with get is read only
     int currentHealth;
 
     Rigidbody2D rigidbody2d;
@@ -42,6 +43,8 @@ public class SwordCatController : MonoBehaviour
         position.y = position.y + 3.0f * vertical * Time.deltaTime; //Character moves 3 units per second
         transform.position = position;    
         */
+        if (currentHealth < (maxHealth / 10))
+            NeedHealth();
     }
 
     private void FixedUpdate()
@@ -57,11 +60,17 @@ public class SwordCatController : MonoBehaviour
         rigidbody2d.MovePosition(position);
     }
 
-    void ChangeHealth(int amount)//void means what value the function will return, in this case nothing, because
-                                 //it just changes the Health
+    //void means what value the function will return, in this case nothing, because
+    //it just changes the Health
+    public void ChangeHealth(int amount)
     {
         //Matchf.Clamp is a built-in function in which the var will not go below 0 and above the maxHealth
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    void NeedHealth()
+    {
+        Debug.Log("Your health is low! eat strawberries!");
     }
 }

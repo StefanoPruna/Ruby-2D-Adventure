@@ -1366,6 +1366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 390261918}
+  - {fileID: 2063262100}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9989,6 +9990,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &2063262100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+    type: 3}
+  m_PrefabInstance: {fileID: 3074554229701090991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2070522767
 GameObject:
   m_ObjectHideFlags: 0
@@ -10143,6 +10150,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c505b292523dd74abf52b8291b0a059, type: 3}
+--- !u!1001 &3074554229701090991
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1134217705}
+    m_Modifications:
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.296875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607035, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074554229616607036, guid: ae6d9043584943c4c99ab87e84676f22,
+        type: 3}
+      propertyPath: m_Name
+      value: CollectibleHealth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae6d9043584943c4c99ab87e84676f22, type: 3}
 --- !u!1001 &3788294816387401672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10215,10 +10291,20 @@ PrefabInstance:
       propertyPath: mySpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3788294814610905745, guid: 874626a042c1c09448c73a2cdab571bc,
+        type: 3}
+      propertyPath: currentHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3788294814610905758, guid: 874626a042c1c09448c73a2cdab571bc,
         type: 3}
       propertyPath: m_Name
       value: SwordCat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788294814610905758, guid: 874626a042c1c09448c73a2cdab571bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: controller
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 874626a042c1c09448c73a2cdab571bc, type: 3}
