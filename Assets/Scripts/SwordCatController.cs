@@ -5,8 +5,13 @@ using UnityEngine;
 public class SwordCatController : MonoBehaviour 
 {
     public int maxHealth;
-    public int health { get { return currentHealth; } }//property definition, with get is read only
-    int currentHealth;
+    public float timeInvincible = 2.0f;
+
+    public int health { get { return _currentHealth; } }//property definition, with get is read only
+    int _currentHealth;
+
+    bool _isInvincible;
+    float _invincibleTimer;
 
     Rigidbody2D rigidbody2d;
     float horizontal, vertical;
@@ -23,8 +28,7 @@ public class SwordCatController : MonoBehaviour
         Application.targetFrameRate = 10;*/
 
         rigidbody2d = GetComponent<Rigidbody2D>();
-
-        currentHealth = maxHealth;
+        _currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -43,7 +47,14 @@ public class SwordCatController : MonoBehaviour
         position.y = position.y + 3.0f * vertical * Time.deltaTime; //Character moves 3 units per second
         transform.position = position;    
         */
-        if (currentHealth < (maxHealth / 10))
+        if (_isInvincible)
+        {
+            _invincibleTimer -= Time.deltaTime;
+            if (_invincibleTimer < 0)
+                _isInvincible = false;
+        }
+
+        if (_currentHealth < (maxHealth / 10))
             NeedHealth();
     }
 
@@ -64,9 +75,17 @@ public class SwordCatController : MonoBehaviour
     //it just changes the Health
     public void ChangeHealth(int amount)
     {
+        if (amount < 0)
+        {
+            if (_isInvincible)
+                return;
+            _isInvincible = true;
+            _invincibleTimer = timeInvincible;
+        }
+
         //Matchf.Clamp is a built-in function in which the var will not go below 0 and above the maxHealth
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, maxHealth);
+        Debug.Log(_currentHealth + "/" + maxHealth);
     }
 
     void NeedHealth()
