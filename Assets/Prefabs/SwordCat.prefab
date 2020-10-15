@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5339812631854170225}
   - component: {fileID: 7740820357425238401}
   - component: {fileID: 1733630591583614162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SwordCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   maxHealth: 0
   timeInvincible: 2
   mySpeed: 0
+  projectilePrefab: {fileID: 0}
 --- !u!50 &5339812631854170225
 Rigidbody2D:
   serializedVersion: 4

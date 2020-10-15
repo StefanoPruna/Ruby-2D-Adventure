@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
 
     Animator animator;
 
+    bool broken = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,13 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        if (!broken)
+        {
+            return;
+        }
+            
         _timer -= Time.deltaTime;
+
         if (_timer < 0)
         {
             _direction = -_direction;
@@ -38,6 +46,11 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (broken != true)
+        {
+            return;
+        }            
+
         Vector2 position = rigidbody2d.position;
 
         if(vertical)
@@ -60,7 +73,14 @@ public class EnemyController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         SwordCatController player = collision.gameObject.GetComponent<SwordCatController>();
+
         if (player != null)
-            player.ChangeHealth(-1);
+            player.ChangeHealth(-1);           
+    }
+
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2d.simulated = false;
     }
 }

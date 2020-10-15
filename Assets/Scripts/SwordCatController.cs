@@ -97,7 +97,7 @@ public class SwordCatController : MonoBehaviour
     {
         if (amount < 0)
         {
-            catAnimator.SetTrigger("SwordCatHit");
+            //catAnimator.SetTrigger("SwordCatHit");
             if (_isInvincible)
                 return;
 
@@ -120,6 +120,7 @@ public class SwordCatController : MonoBehaviour
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(lookDirection, 300);
-        catAnimator.SetTrigger("Launch");
+        //catAnimator.SetTrigger("Launch");
+        //Quaternion is a mathematical operator that can express rotation; Quaternion.identity means no rotation
     }
 }

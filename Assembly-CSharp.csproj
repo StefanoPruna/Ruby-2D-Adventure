@@ -80,6 +80,12 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/makem/OneDrive/Documents/Github/Ruby Adventure/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/makem/OneDrive/Documents/Github/Ruby Adventure/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/makem/OneDrive/Documents/Github/Ruby Adventure/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
