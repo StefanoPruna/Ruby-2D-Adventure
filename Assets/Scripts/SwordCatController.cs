@@ -7,8 +7,8 @@ public class SwordCatController : MonoBehaviour
     public int maxHealth;
     public float timeInvincible = 2.0f;
 
-    public int health { get { return _currentHealth; } }//property definition, with get is read only
-    int _currentHealth;
+    public int health { get { return currentHealth; } }//property definition, with get is read only
+    public int currentHealth;
 
     bool _isInvincible;
     float _invincibleTimer;
@@ -23,6 +23,8 @@ public class SwordCatController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    AudioSource mySound;
+
     // Class means defining a new component, in this case SwordCatController
     void Start()
     {
@@ -33,8 +35,10 @@ public class SwordCatController : MonoBehaviour
         Application.targetFrameRate = 10;*/
 
         rigidbody2d = GetComponent<Rigidbody2D>();
-        _currentHealth = maxHealth;
+        currentHealth = maxHealth;
         catAnimator = GetComponent<Animator>();
+
+        mySound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -71,11 +75,23 @@ public class SwordCatController : MonoBehaviour
                 _isInvincible = false;
         }
 
-        if (_currentHealth < (maxHealth / 10))
+        if (currentHealth < (maxHealth / 10))
             NeedHealth();
 
         if (Input.GetKeyDown(KeyCode.C))
             Launch();
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                NPCBoxTalk character = hit.collider.GetComponent<NPCBoxTalk>();
+                if (character != null)
+                    character.DisplayDialog();
+            }
+                //Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -106,8 +122,9 @@ public class SwordCatController : MonoBehaviour
         }
 
         //Matchf.Clamp is a built-in function in which the var will not go below 0 and above the maxHealth
-        _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, maxHealth);
-        Debug.Log(_currentHealth + "/" + maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        UIHealthBar.healtBar.SetValue(currentHealth / (float)maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 
     void NeedHealth()
@@ -122,5 +139,10 @@ public class SwordCatController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
         //catAnimator.SetTrigger("Launch");
         //Quaternion is a mathematical operator that can express rotation; Quaternion.identity means no rotation
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        mySound.PlayOneShot(clip);
     }
 }

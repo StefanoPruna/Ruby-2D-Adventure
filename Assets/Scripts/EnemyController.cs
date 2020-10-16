@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public int maxHealth;
-    private int _currentHealth;
+    public int currentHealth;
 
     public float speed;
     public bool vertical;
@@ -19,12 +19,14 @@ public class EnemyController : MonoBehaviour
 
     bool broken = true;
 
+    public ParticleSystem smokeEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         _timer = changeTime;
-        _currentHealth = maxHealth;
+        currentHealth = maxHealth;
         animator = GetComponent<Animator>();
     }
 
@@ -66,16 +68,23 @@ public class EnemyController : MonoBehaviour
             position.x = position.x + Time.deltaTime * speed;
         }
 
-        rigidbody2d.MovePosition(position);
+        rigidbody2d.MovePosition(position);        
     }
 
     //We use OnCollisioneEnter for when there is a collision between the two gameObjects/characters
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        SwordCatController player = collision.gameObject.GetComponent<SwordCatController>();
+        SwordCatController controller = collision.gameObject.GetComponent<SwordCatController>();
 
-        if (player != null)
-            player.ChangeHealth(-1);           
+        if (controller != null)
+            controller.ChangeHealth(-1);
+    }
+
+    public void Damage()
+    {
+        currentHealth -= 1;
+        if (currentHealth <= 0)
+            Destroy(gameObject);
     }
 
     public void Fix()
