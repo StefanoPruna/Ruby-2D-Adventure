@@ -9,13 +9,18 @@ public class Projectile : MonoBehaviour
 
     float _TimeToLive = 2f;
 
+    AudioSource hit;
+    public AudioClip hitEnemy;
+
     // Start is called before the first frame update
     //Awake is called immediately when the object is created, or instantiate
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.velocity = transform.right * _speed;
+        hit = GetComponent<AudioSource>();
         Destroy(gameObject, _TimeToLive);
+
     }
 
     // Update is called once per frame
@@ -35,14 +40,20 @@ public class Projectile : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" && Grid.FindObjectOfType<CompositeCollider2D>())
         {
-            Destroy(gameObject);
+            PlaySound(hitEnemy);
             collision.gameObject.GetComponent<EnemyController>().Damage();
-            Debug.Log("Projectile Collision with " + collision.gameObject);            
+            Debug.Log("Projectile Collision with " + collision.gameObject);
+            Destroy(gameObject);
         }
 
       /*EnemyController e = collision.gameObject.GetComponent<EnemyController>();
       if (e != null)
           e.Fix();
           */        
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        hit.PlayOneShot(clip);
     }
 }

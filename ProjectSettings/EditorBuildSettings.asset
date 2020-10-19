@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Ruby 2D adventure.unity
+    guid: bd34ba2ac00917b4a9e22427b1006a4b
   m_configObjects: {}

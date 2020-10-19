@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 448}
-  m_MaxSize: {x: 18008, y: 14048}
+  m_MinSize: {x: 677, y: 448}
+  m_MaxSize: {x: 18004, y: 14024}
   vertical: 0
-  controlID: 127
+  controlID: 117
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,14 +183,14 @@ MonoBehaviour:
     height: 550
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: a00e1d9cacac1464ea91c5bd865e807a
-  m_SceneLighting: 0
+  m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -22.56, y: -3.67, z: 0.296875}
+    m_Target: {x: 32.749588, y: 13.388478, z: -0.24298851}
     speed: 2
-    m_Value: {x: -22.56, y: -3.67, z: 0.296875}
+    m_Value: {x: 32.749588, y: 13.388478, z: -0.24298851}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -222,9 +222,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.3951437
+    m_Target: 30.265806
     speed: 2
-    m_Value: 2.3951437
+    m_Value: 30.265806
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 570
     width: 1221
     height: 377
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -267,7 +267,7 @@ MonoBehaviour:
   - {fileID: 11}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 6
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,8 +594,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 947
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -632,21 +632,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 74fbffffdafbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Evon, Fast Evil Mouse
-        m_OriginalName: Evon, Fast Evil Mouse
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -1176
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 13}
       m_SearchString: 
@@ -677,10 +677,10 @@ MonoBehaviour:
     y: 0
     width: 495
     height: 947
-  m_MinSize: {x: 277, y: 348}
-  m_MaxSize: {x: 10002, y: 14048}
+  m_MinSize: {x: 275, y: 324}
+  m_MaxSize: {x: 10002, y: 14024}
   vertical: 1
-  controlID: 128
+  controlID: 118
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -700,8 +700,8 @@ MonoBehaviour:
     y: 0
     width: 495
     height: 481
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -840,20 +840,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Audio
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Audio
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\makem\OneDrive\Documents\Github\Ruby Adventure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: 8a270000
-    m_LastClickedID: 10122
-    m_ExpandedIDs: 0000000068270000a42700002028000032280000102a0000c22b00000e2c0000322c000000ca9a3b
+    m_SelectedIDs: 602a0000
+    m_LastClickedID: 10848
+    m_ExpandedIDs: 0000000084270000c42700004c2800005e280000602a00003a2c00008e2c0000b22c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -881,7 +881,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000068270000a42700002028000032280000c22b00000e2c0000322c0000
+    m_ExpandedIDs: 0000000084270000c42700004c2800005e280000602a00003a2c00008e2c0000b22c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -906,24 +906,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 44280000
-    m_LastClickedInstanceID: 10308
+    m_SelectedInstanceIDs: 4e2d0000
+    m_LastClickedInstanceID: 11598
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: ec2f0000342d0000402d0000aa2e0000302f0000c02c0000360c00004426000084370000b0280000260c0000d02800006a290000f4270000c0290000242700009c26000034de000094e000007a0c0000b20e0000300a0000b80c00001c0c0000060a0000ce0e0000e20c0000ee0a00005c0b00007a0e0000e82700000a2a000090270000da260000482a0000562c00006a0a0000a80a0000240f00001632000096290000b42800006e2200000c3000006e0d0000040e0000a20b0000c6320000b02c0000622d00007234000084290000122700005c2c0000062a00007a270000e62c0000582b000010270000282c000028330000942e0000e2340000682a0000700a0000960a00009827000070220000262d00003e270000bc2b0000140f00005c0a0000fe2c0000c82900009c2b00006a2e000028270000a40a0000f60d0000d42200009c2a0000b42a0000503300009e28000096280000f4300000f6270000be290000e6270000782a00008e2a0000d6290000ca26000000000000462a0000182c0000362f0000482f0000402f00002a330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CollectibleHealth
-      m_OriginalName: CollectibleHealth
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10308
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 19}
     m_CreateAssetUtility:

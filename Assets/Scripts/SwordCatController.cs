@@ -24,6 +24,7 @@ public class SwordCatController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource mySound;
+    public AudioClip throwing;
 
     // Class means defining a new component, in this case SwordCatController
     void Start()
@@ -139,6 +140,7 @@ public class SwordCatController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
         //catAnimator.SetTrigger("Launch");
         //Quaternion is a mathematical operator that can express rotation; Quaternion.identity means no rotation
+        PlaySound(throwing);
     }
 
     public void PlaySound(AudioClip clip)
